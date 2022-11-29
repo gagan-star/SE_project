@@ -6,7 +6,7 @@ from display import display
 def main():
 
         st.title("PERISHABLE MANAGEMENT SYSTEM:")
-        menu=["queries",'book']
+        menu=["filter",'book']
         choice=st.sidebar.selectbox("menu",menu)
         table_create()
 
@@ -15,7 +15,7 @@ def main():
         if choice=="book":
             st.subheader("task opted to update booking status:")
             user_book()
-        elif choice=="queries":
+        elif choice=="filter":
             opt=['view all','view products having lesser life span than entered value','view products having more life span than entered value','view based on product name']
             question=st.selectbox("select queries",opt)
             if question==opt[0]:
